@@ -3,4 +3,5 @@
     <dimen name="card_corner">32dp</dimen>
     <dimen name="card_elevation">16dp</dimen>
     <dimen name="text_skill_size">12dp</dimen>
+    <dimen name="card_padding">24dp</dimen>
 </resources>
