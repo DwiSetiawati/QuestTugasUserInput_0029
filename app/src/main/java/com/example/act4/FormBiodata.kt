@@ -143,6 +143,28 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     color = colorResource(R.color.text_subtitle),
                     textAlign = TextAlign.Center
                 )
+
+                // Nama Depan | Nama Belakang
+                Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.field_spacing))) {
+                    OutlinedTextField(
+                        value = firstName,
+                        onValueChange = { firstName = it },
+                        label = { Text(stringResource(R.string.first_name)) },
+                        singleLine = true,
+                        shape = fieldShape,
+                        colors = fieldColors,
+                        modifier = Modifier.weight(1f)
+                    )
+                    OutlinedTextField(
+                        value = lastName,
+                        onValueChange = { lastName = it },
+                        label = { Text(stringResource(R.string.last_name)) },
+                        singleLine = true,
+                        shape = fieldShape,
+                        colors = fieldColors,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
             }
         }
     }
