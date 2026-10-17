@@ -32,4 +32,5 @@
     <string name="result_name">Nama : %1$s %2$s</string>
     <string name="result_email">Email : %1$s</string>
     <string name="result_birth_date">Tgl Lahir : %1$s</string>
+    <string name="result_experience">Experience : %1$s</string>
 </resources>
