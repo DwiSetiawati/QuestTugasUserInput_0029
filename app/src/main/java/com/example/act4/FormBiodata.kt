@@ -111,5 +111,26 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 .align(Alignment.TopStart)
                 .padding(dimensionResource(R.dimen.indicator_padding))
         )
+
+        // 3. Box putih yang MENGAPUNG di atas Scaffold
+        val cardShape = RoundedCornerShape(
+            topStart = dimensionResource(R.dimen.card_corner),
+            topEnd = dimensionResource(R.dimen.card_corner)
+        )
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .shadow(dimensionResource(R.dimen.card_elevation), cardShape)
+                .background(colorResource(R.color.white), cardShape)
+        ) {
+            Column(
+                modifier = Modifier
+                    .verticalScroll(rememberScrollState())
+                    .padding(dimensionResource(R.dimen.card_padding)),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.field_spacing))
+            ) { }
+        }
     }
 }
