@@ -29,4 +29,5 @@
     </string-array>
 
     <string name="result_title">Data Tersimpan</string>
+    <string name="result_name">Nama : %1$s %2$s</string>
 </resources>
