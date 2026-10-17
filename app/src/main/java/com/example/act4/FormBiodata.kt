@@ -177,6 +177,60 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     colors = fieldColors,
                     modifier = Modifier.fillMaxWidth()
                 )
+
+                // Tgl Lahir | Experience
+                Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.field_spacing))) {
+                    OutlinedTextField(
+                        value = birthDate,
+                        onValueChange = {},
+                        readOnly = true,
+                        label = { Text(stringResource(R.string.birth_date)) },
+                        trailingIcon = {
+                            IconButton(onClick = { showDatePicker = true }) {
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_calendar),
+                                    contentDescription = stringResource(R.string.cd_pick_date)
+                                )
+                            }
+                        },
+                        singleLine = true,
+                        shape = fieldShape,
+                        colors = fieldColors,
+                        modifier = Modifier.weight(1f)
+                    )
+
+                    ExposedDropdownMenuBox(
+                        expanded = expanded,
+                        onExpandedChange = { expanded = it },
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        OutlinedTextField(
+                            value = experience,
+                            onValueChange = {},
+                            readOnly = true,
+                            label = { Text(stringResource(R.string.experience)) },
+                            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded) },
+                            singleLine = true,
+                            shape = fieldShape,
+                            colors = fieldColors,
+                            modifier = Modifier.menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
+                        )
+                        ExposedDropdownMenu(
+                            expanded = expanded,
+                            onDismissRequest = { expanded = false }
+                        ) {
+                            experienceOptions.forEach { option ->
+                                DropdownMenuItem(
+                                    text = { Text(option) },
+                                    onClick = {
+                                        experience = option
+                                        expanded = false
+                                    }
+                                )
+                            }
+                        }
+                    }
+                }
             }
         }
     }
