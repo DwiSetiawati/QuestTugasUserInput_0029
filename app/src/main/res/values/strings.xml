@@ -20,4 +20,8 @@
 
     <string name="cd_background">Gambar latar bunga</string>
     <string name="cd_pick_date">Pilih tanggal lahir</string>
+
+    <string-array name="experience_options">
+
+    </string-array>
 </resources>
