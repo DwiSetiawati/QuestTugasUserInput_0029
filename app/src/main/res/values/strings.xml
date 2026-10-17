@@ -27,4 +27,6 @@
         <item>3 - 5 tahun</item>
         <item>Lebih dari 5 tahun</item>
     </string-array>
+
+    <string name="result_title">Data Tersimpan</string>
 </resources>
