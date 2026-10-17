@@ -9,4 +9,7 @@
     <color name="button_disabled">#FFE3E3E3</color>
     <color name="indicator_active">#FF1A73E8</color>
     <color name="indicator_inactive">#FF9E9E9E</color>
+
+    <color name="bg_dark_purple">#1B0B2E</color>
+    <color name="bg_deep_violet">#0F051D</color>
 </resources>
