@@ -6,4 +6,5 @@
     <color name="text_primary">#FF1C1B1F</color>
     <color name="text_subtitle">#FF8A8A8A</color>
     <color name="field_border">#FF79747E</color>
+    <color name="button_disabled">#FFE3E3E3</color>
 </resources>
