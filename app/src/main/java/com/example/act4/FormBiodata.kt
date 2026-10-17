@@ -130,7 +130,20 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     .padding(dimensionResource(R.dimen.card_padding)),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.field_spacing))
-            ) { }
+            ) {
+                Text(
+                    text = stringResource(R.string.form_title),
+                    fontSize = dimensionResource(R.dimen.text_title_size).value.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = colorResource(R.color.purple_title)
+                )
+                Text(
+                    text = stringResource(R.string.form_subtitle),
+                    fontSize = dimensionResource(R.dimen.text_subtitle_size).value.sp,
+                    color = colorResource(R.color.text_subtitle),
+                    textAlign = TextAlign.Center
+                )
+            }
         }
     }
 }
