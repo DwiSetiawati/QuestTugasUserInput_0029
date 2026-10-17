@@ -335,3 +335,19 @@ fun FormBiodata(modifier: Modifier = Modifier) {
         )
     }
 }
+
+@Composable
+private fun SkillCheckbox(
+    label: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit
+) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Checkbox(checked = checked, onCheckedChange = onCheckedChange)
+        Text(
+            text = label,
+            fontSize = dimensionResource(R.dimen.text_skill_size).value.sp,
+            color = colorResource(R.color.text_primary)
+        )
+    }
+}
