@@ -351,3 +351,20 @@ private fun SkillCheckbox(
         )
     }
 }
+
+@Composable
+private fun PageIndicator(modifier: Modifier = Modifier, selectedIndex: Int = 0) {
+    Row(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.indicator_spacing))
+    ) {
+        repeat(integerResource(R.integer.indicator_count)) { index ->
+            val color = if (index == selectedIndex) R.color.indicator_active else R.color.indicator_inactive
+            Box(
+                modifier = Modifier
+                    .size(dimensionResource(R.dimen.indicator_size))
+                    .background(colorResource(color), CircleShape)
+            )
+        }
+    }
+}
