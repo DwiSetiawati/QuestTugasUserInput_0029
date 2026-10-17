@@ -251,6 +251,27 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     SkillCheckbox(stringResource(R.string.skill_uiux), skillUiux) { skillUiux = it }
                     SkillCheckbox(stringResource(R.string.skill_web), skillWeb) { skillWeb = it }
                 }
+
+                // Tombol Proceed
+                Button(
+                    onClick = { showResult = true },
+                    enabled = isFormValid,
+                    shape = RoundedCornerShape(dimensionResource(R.dimen.button_corner)),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = colorResource(R.color.purple_title),
+                        contentColor = colorResource(R.color.white),
+                        disabledContainerColor = colorResource(R.color.button_disabled),
+                        disabledContentColor = colorResource(R.color.white)
+                    ),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(dimensionResource(R.dimen.button_height))
+                ) {
+                    Text(
+                        text = stringResource(R.string.proceed),
+                        fontWeight = FontWeight.Bold
+                    )
+                }
             }
         }
     }
