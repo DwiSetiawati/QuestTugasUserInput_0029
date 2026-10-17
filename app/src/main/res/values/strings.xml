@@ -22,6 +22,9 @@
     <string name="cd_pick_date">Pilih tanggal lahir</string>
 
     <string-array name="experience_options">
-
+        <item>Kurang dari 1 tahun</item>
+        <item>1 - 3 tahun</item>
+        <item>3 - 5 tahun</item>
+        <item>Lebih dari 5 tahun</item>
     </string-array>
 </resources>
