@@ -11,4 +11,8 @@
     <dimen name="indicator_size">8dp</dimen>
     <dimen name="indicator_spacing">6dp</dimen>
     <dimen name="indicator_padding">16dp</dimen>
+
+    <dimen name="text_title_size">28dp</dimen>
+    <dimen name="text_subtitle_size">12dp</dimen>
+    <dimen name="text_label_size">14dp</dimen>
 </resources>
