@@ -93,4 +93,23 @@ fun FormBiodata(modifier: Modifier = Modifier) {
         focusedTextColor = colorResource(R.color.text_primary),
         unfocusedTextColor = colorResource(R.color.text_primary)
     )
+
+    Box(modifier = modifier.fillMaxSize()) {
+
+        // 1. Gambar latar
+        Image(
+            painter = painterResource(R.drawable.bunga),
+            contentDescription = stringResource(R.string.cd_background),
+            contentScale = ContentScale.Crop,
+            alignment = Alignment.TopCenter,
+            modifier = Modifier.fillMaxSize()
+        )
+
+        // 2. Indikator titik-titik
+        PageIndicator(
+            modifier = Modifier
+                .align(Alignment.TopStart)
+                .padding(dimensionResource(R.dimen.indicator_padding))
+        )
+    }
 }
