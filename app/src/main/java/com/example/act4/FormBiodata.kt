@@ -301,4 +301,37 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             DatePicker(state = datePickerState)
         }
     }
+
+    // ===== Dialog hasil data tersimpan =====
+    if (showResult) {
+        val labelAndroid = stringResource(R.string.skill_android)
+        val labelUiux = stringResource(R.string.skill_uiux)
+        val labelWeb = stringResource(R.string.skill_web)
+        val separator = stringResource(R.string.skill_separator)
+
+        val selectedSkills = buildList {
+            if (skillAndroid) add(labelAndroid)
+            if (skillUiux) add(labelUiux)
+            if (skillWeb) add(labelWeb)
+        }.joinToString(separator)
+
+        AlertDialog(
+            onDismissRequest = { showResult = false },
+            title = { Text(stringResource(R.string.result_title)) },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.field_spacing))) {
+                    Text(stringResource(R.string.result_name, firstName, lastName))
+                    Text(stringResource(R.string.result_email, email))
+                    Text(stringResource(R.string.result_birth_date, birthDate))
+                    Text(stringResource(R.string.result_experience, experience))
+                    Text(stringResource(R.string.result_skills, selectedSkills))
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showResult = false }) {
+                    Text(stringResource(R.string.dialog_ok))
+                }
+            }
+        )
+    }
 }
