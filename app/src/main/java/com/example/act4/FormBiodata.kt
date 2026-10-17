@@ -231,6 +231,26 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                         }
                     }
                 }
+
+                // Skill
+                Text(
+                    text = stringResource(R.string.choose_skill),
+                    fontSize = dimensionResource(R.dimen.text_label_size).value.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = colorResource(R.color.text_primary),
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    SkillCheckbox(
+                        stringResource(R.string.skill_android),
+                        skillAndroid
+                    ) { skillAndroid = it }
+                    SkillCheckbox(stringResource(R.string.skill_uiux), skillUiux) { skillUiux = it }
+                    SkillCheckbox(stringResource(R.string.skill_web), skillWeb) { skillWeb = it }
+                }
             }
         }
     }
