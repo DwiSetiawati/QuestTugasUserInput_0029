@@ -13,4 +13,7 @@
     <string name="skill_uiux">UI/UX</string>
     <string name="skill_web">Web</string>
     <string name="proceed">Proceed</string>
+
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Batal</string>
 </resources>
