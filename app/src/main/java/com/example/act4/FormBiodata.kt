@@ -368,3 +368,9 @@ private fun PageIndicator(modifier: Modifier = Modifier, selectedIndex: Int = 0)
         }
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+private fun FormBiodataPreview() {
+    Act4Theme { FormBiodata()}
+}
