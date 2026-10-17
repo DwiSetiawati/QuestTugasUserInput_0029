@@ -12,4 +12,8 @@
 
     <color name="bg_dark_purple">#1B0B2E</color>
     <color name="bg_deep_violet">#0F051D</color>
+
+    <color name="accent_gold">#FFB852</color>
+    <color name="accent_gold_glow">#FFD185</color>
+    <color name="accent_amber">#E68A2E</color>
 </resources>
