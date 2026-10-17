@@ -275,4 +275,30 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             }
         }
     }
+
+    // ===== Dialog kalender =====
+    if (showDatePicker) {
+        val datePickerState = rememberDatePickerState()
+        val dateFormat = stringResource(R.string.date_format)
+        DatePickerDialog(
+            onDismissRequest = { showDatePicker = false },
+            confirmButton = {
+                TextButton(onClick = {
+                    datePickerState.selectedDateMillis?.let { millis ->
+                        val formatter = SimpleDateFormat(dateFormat, Locale.getDefault())
+                        formatter.timeZone = TimeZone.getTimeZone("UTC")
+                        birthDate = formatter.format(Date(millis))
+                    }
+                    showDatePicker = false
+                }) { Text(stringResource(R.string.dialog_ok)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDatePicker = false }) {
+                    Text(stringResource(R.string.dialog_cancel))
+                }
+            }
+        ) {
+            DatePicker(state = datePickerState)
+        }
+    }
 }
