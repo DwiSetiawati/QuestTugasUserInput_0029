@@ -17,4 +17,6 @@
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Batal</string>
     <string name="date_format">dd/MM/yyyy</string>
+
+    <string name="cd_background">Gambar latar bunga</string>
 </resources>
