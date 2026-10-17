@@ -7,4 +7,5 @@
     <color name="text_subtitle">#FF8A8A8A</color>
     <color name="field_border">#FF79747E</color>
     <color name="button_disabled">#FFE3E3E3</color>
+    <color name="indicator_active">#FF1A73E8</color>
 </resources>
